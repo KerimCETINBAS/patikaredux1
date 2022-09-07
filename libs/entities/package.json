@@ -10,7 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@typegoose/typegoose": "^9.11.2",
     "bcrypt": "^5.0.1",
+    "mongoose": "^6.5.5",
     "typegoose": "^5.9.1"
   },
   "devDependencies": {
