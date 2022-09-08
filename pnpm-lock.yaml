@@ -41,12 +41,12 @@ importers:
       '@types/bcrypt': ^5.0.0
       bcrypt: ^5.0.1
       mongoose: ^6.5.5
-      typegoose: ^5.9.1
+      reflect-metadata: ^0.1.13
     dependencies:
       '@typegoose/typegoose': 9.11.2_mongoose@6.5.5
       bcrypt: 5.0.1
       mongoose: 6.5.5
-      typegoose: 5.9.1_mongoose@6.5.5
+      reflect-metadata: 0.1.13
     devDependencies:
       '@types/bcrypt': 5.0.0
 
@@ -1672,17 +1672,6 @@ packages:
 
   /tslib/2.4.0:
     resolution: {integrity: sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==}
-    dev: false
-
-  /typegoose/5.9.1_mongoose@6.5.5:
-    resolution: {integrity: sha512-D+vMhNyZeKBZHrmJFZwOodl3T9W2NOXY+hbnW/f1n60oEL8+L15eryFc9C6fAKrlnkgpui+kdQnNXsLwx2MgCw==}
-    engines: {node: '>=8.10.0'}
-    deprecated: No longer maintained, use https://github.com/typegoose/typegoose
-    peerDependencies:
-      mongoose: ^5.6.7
-    dependencies:
-      mongoose: 6.5.5
-      reflect-metadata: 0.1.13
     dev: false
 
   /typescript/4.8.2:

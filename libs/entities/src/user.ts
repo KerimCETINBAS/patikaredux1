@@ -1,47 +1,56 @@
-import { DocumentType, pre, prop, Ref} from "@typegoose/typegoose";
-import {} from "typegoose"
+
+import "reflect-metadata"
+import { DocumentType, pre, prop, Ref, getModelForClass, ReturnModelType, PropType } from "@typegoose/typegoose";
 import bcrypt from "bcrypt"
-import Note from "./notes";
-import { BeAnObject, IObjectWithTypegooseFunction , ReturnModelType } from "@typegoose/typegoose/lib/types";
+import { Note } from "./notes";
 
 
 
 
-@pre<User>('save', async function() {
-    const hash = await bcrypt.hash(this.password, await bcrypt.genSalt(10));
-    this.password = hash
-})
+// @pre<User>('save', async function() {
+//     const hash = await bcrypt.hash(this.password as string, await bcrypt.genSalt(10));
+//     this.password = hash
+// })
     
 class User {
-    @prop({ required: true })
-    public name!: string;
+    @prop()
+    public name?: string;
 
-    @prop({ required: true })
-    public password!: string;
+    @prop()
+    public password?: string;
 
-    @prop({ required: true })
-    public email!: string;
+    @prop()
+    public email?: string;
+    
+    @prop({ ref: ()=>Array<Note>, required: true, default: [] }, PropType.ARRAY)
+    public notes?: Ref<Note>[];
 
-    @prop({ref: () => Note })
-    public notes?: Ref<Note>[]
+    // public static async comparePasswrod(this: ReturnModelType<typeof User>, user: { password: string, email: string, name: string , notes: Note[]}) {
 
-    public static async comparePasswrod(this: ReturnModelType<typeof User>, user: { password: string, email: string, name: string }) {
+    //     const _user = await this.findOne(user).exec();
 
-        const _user = await this.findOne(user).exec();
+    //     if (_user) {
 
-        if (_user) {
-
-            const isPasswordCorrect = bcrypt.compareSync(user.password, _user.password);
-            return isPasswordCorrect;
-        }
+    //         const isPasswordCorrect = bcrypt.compareSync(user.password, _user.password as string);
+    //         delete _user.password
+    //         return _user;
+    //     }
         
-        return false;
+    //     return false;
 
-    }
+    // }
 
-
+ 
 
 }
 
+const model = getModelForClass(User);
 
-export default User
+export default model
+
+
+export { User };
+    
+    
+
+

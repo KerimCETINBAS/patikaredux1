@@ -1,5 +1,5 @@
-import { prop, Ref } from "typegoose";
-import User from "./user";
+import { getModelForClass, prop, Ref } from "@typegoose/typegoose";
+import { User } from "./user";
 
 class Note {
     @prop({ ref: () => User })
@@ -13,4 +13,5 @@ class Note {
 }
 
 
-export default Note
+export default getModelForClass(Note)
+export { Note } 
