@@ -3,12 +3,8 @@
 ## Monorepo structure
 ```
 -- apps /directory contains all applications  
-    - api  - rest api  
-    - site - react app
--- libs
-    - types - shared types 
-    - entities - typegoose project
-    - redux - redux 
+    - api  - rest api - microp/typegoose
+    - site - react/redux app
 ...
 ```
 
