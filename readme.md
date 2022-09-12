@@ -1,6 +1,6 @@
 # note app
-
-## Monorepo structure
+## [Patika.dev](https://patika.dev) 
+### Monorepo structure
 ```
 -- apps /directory contains all applications  
     - api  - rest api - microp/typegoose
