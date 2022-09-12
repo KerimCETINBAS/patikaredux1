@@ -1,15 +1,16 @@
 # note app
 ## [Patika.dev](https://patika.dev) 
-### Monorepo structure
+
+___
 ```
--- apps /directory contains all applications  
+-- apps /dizini bütün uygulamaları barındırıyor
     - api  - rest api - microp/typegoose
     - site - front-end - react/redux
 ...
 ```
 
-- Clone this repo
-- open a terminal in this repository root
+- Bu repository'i klonla
+- Projenin root dizininde terminal açın
 
 ``` shell
     # at project root
