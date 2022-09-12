@@ -1,8 +1,8 @@
 import { getModelForClass, prop, Ref } from "@typegoose/typegoose";
-import { User } from "./user";
+import UserModel, { User } from "./user";
 
 class Note {
-    @prop({ ref: () => User })
+    @prop({ ref: () => typeof User , required: true})
     public user?: Ref<User>;
 
     @prop()

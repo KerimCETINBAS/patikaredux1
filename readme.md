@@ -4,7 +4,7 @@
 ```
 -- apps /directory contains all applications  
     - api  - rest api - microp/typegoose
-    - site - react/redux app
+    - site - front-end - react/redux
 ...
 ```
 
@@ -16,16 +16,18 @@
 
     $ pnpm install
 
-    cd apps/api
-    pnpm dev
+    $ cd apps/api
+    $ tsc
+    $ node dist
 
-    cd apps/site
-    pnpm dev
+    $ cd apps/site
+    $ pnpm dev
 
 ```
 - visit http://localhost:5171
 
-#todo use a Layer 7 reverse proxy with docker network
 
+Bir sebepten dolayı typegoose'un unique constraiti çalışmıyor. Aynı isimle birden fazla kullanıcı yaratmaktan kaçının
+acılmış issue yi [buradan](https://github.com/szokodiakos/typegoose/issues/277) görebilirsiniz 
 ___
 licence MIT

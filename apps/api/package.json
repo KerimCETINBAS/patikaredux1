@@ -1,5 +1,5 @@
 {
-  "name": "@note_apps/apps.api",
+  "name": "@note_app/apps.api",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,7 +10,18 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@typegoose/typegoose": "^9.11.2",
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
     "jsonwebtoken": "^8.5.1",
-    "microp": "^0.1.38"
+    "microp": "^0.1.38",
+    "mongoose": "~6.5.0",
+    "mongoose-unique-validator": "^3.1.0"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "@types/cors": "^2.8.12",
+    "@types/jsonwebtoken": "^8.5.9",
+    "@types/mongoose-unique-validator": "^1.0.6"
   }
 }
